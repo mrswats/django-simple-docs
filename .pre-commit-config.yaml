@@ -14,29 +14,24 @@ repos:
       - id: autoflake
         args: [-r, -i, --remove-all-unused-imports, --remove-duplicate-keys]
   - repo: https://github.com/psf/black
-    rev: 26.3.1
+    rev: 26.5.1
     hooks:
       - id: black
         args: [-l, "99", -t, py314]
   - repo: https://github.com/asottile/reorder_python_imports
-    rev: v3.16.0
+    rev: v3.17.0
     hooks:
       - id: reorder-python-imports
   - repo: https://github.com/adamchainz/djade-pre-commit
     rev: "1.9.0"
     hooks:
       - id: djade
-  - repo: https://github.com/pre-commit/mirrors-mypy
-    rev: v1.20.2
-    hooks:
-      - id: mypy
-        args: [--ignore-missing-imports, --exclude, tests, --exclude, .venv]
   - repo: https://github.com/asottile/pyupgrade
     rev: v3.21.2
     hooks:
       - id: pyupgrade
   - repo: https://github.com/adamchainz/django-upgrade
-    rev: "1.30.0"
+    rev: "1.31.1"
     hooks:
       - id: django-upgrade
   - repo: https://github.com/PyCQA/flake8

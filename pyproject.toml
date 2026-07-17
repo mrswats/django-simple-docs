@@ -1,43 +1,51 @@
 [project]
-name = "awesome-python-project"
+name = "django-simple-docs"
 version = "0.1.0"
-description = ""
+description = "A ready-to-use package to add drf-spectacular docs to your DRF API."
 readme = "README.md"
 requires-python = ">=3.14.1"
-license = { file = "LICENSE" }
-dependencies = []
+dependencies = [
+    "django",
+    "djangorestframework",
+    "drf_spectacular",
+]
+
+[project.license]
+file = "LICENSE"
 
 [project.optional-dependencies]
 test = [
     "covdefaults",
     "pytest",
     "pytest-cov",
+    "pytest-django",
     "pytest-randomly",
     "pytest-xdist",
     "time-machine",
 ]
 
 [build-system]
-requires = ["setuptools"]
+requires = [
+    "setuptools",
+]
 build-backend = "setuptools.build_meta"
 
-[tool.setuptools.packages]
-find = {}
+[tool.setuptools.packages.find]
 
 [tool.autoflake]
 recursive = true
 
-[tool.mypy]
-files = "."
-ignore_missing_imports = true
-strict = true
-exclude = [
-    "tests/",
-]
-
 [tool.coverage.run]
-plugins = ["covdefaults"]
-omit = []
+plugins = [
+    "covdefaults",
+]
+omit = [
+    "manage.py",
+    "testing/*",
+]
 
 [tool.coverage.html]
 directory = "artifacts/htmlcov/"
+
+[tool.pytest.ini_options]
+DJANGO_SETTINGS_MODULE = "testing.settings"
