@@ -4,6 +4,7 @@ import pytest
 from django.apps import apps
 from django.test import Client
 from django.urls import reverse
+from rest_framework.settings import api_settings
 
 
 def test_django_simple_docs_startup_checks_drf_spectacular_is_installed(settings):
@@ -18,7 +19,7 @@ def test_django_simple_docs_startup_checks_drf_spectacular_is_installed(settings
 
 
 def test_django_simple_docs_startup_checks_drf_schema_is_configured(settings):
-    settings.REST_FRAMEWORK["DEFAULT_SCHEMA_CLASS"] = "foo.bar"
+    settings.REST_FRAMEWORK["DEFAULT_SCHEMA_CLASS"] = api_settings.DEFAULT_SCHEMA_CLASS
 
     simple_docs_app = apps.get_app_config("django_simple_docs")
 
