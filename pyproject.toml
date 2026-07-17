@@ -1,9 +1,11 @@
 [project]
 name = "django-simple-docs"
-version = "1.0.0"
+version = "1.1.0"
 description = "A ready-to-use package to add drf-spectacular docs to your DRF API."
 license = "MIT"
-license-files = ["LICENSE"]
+license-files = [
+    "LICENSE",
+]
 readme = "README.md"
 requires-python = ">=3.14.1"
 dependencies = [
