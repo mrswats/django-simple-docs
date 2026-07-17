@@ -2,6 +2,8 @@
 name = "django-simple-docs"
 version = "1.0.0"
 description = "A ready-to-use package to add drf-spectacular docs to your DRF API."
+license = "MIT"
+license-files = ["LICENSE"]
 readme = "README.md"
 requires-python = ">=3.14.1"
 dependencies = [
@@ -9,9 +11,24 @@ dependencies = [
     "djangorestframework",
     "drf_spectacular",
 ]
+classifiers = [
+    "Intended Audience :: Developers",
+    "Programming Language :: Python :: 3.9",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Programming Language :: Python :: 3.13",
+    "Programming Language :: Python :: 3.14",
+    "Operating System :: OS Independent",
+    "Topic :: Documentation",
+    "Environment :: Web Environment",
+    "Framework :: Django",
+]
 
-[project.license]
-file = "LICENSE"
+[project.urls]
+"Home Page" = "https://github.com/mrswats/django-simple-docs"
+Repository = "https://github.com/mrswats/django-simple-docs"
+Github = "https://github.com/mrswats/django-simple-docs"
 
 [project.optional-dependencies]
 test = [
