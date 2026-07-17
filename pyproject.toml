@@ -1,6 +1,6 @@
 [project]
 name = "django-simple-docs"
-version = "0.1.0"
+version = "0.2.0"
 description = "A ready-to-use package to add drf-spectacular docs to your DRF API."
 readme = "README.md"
 requires-python = ">=3.14.1"
